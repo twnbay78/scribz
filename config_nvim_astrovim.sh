@@ -14,6 +14,7 @@ chmod u+x nvim.appimage
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 # Set defaults 
+echo "Setting vim defaults"
 export CUSTOM_NVIM_PATH=~/
 sudo update-alternatives --install /usr/bin/ex ex "${CUSTOM_NVIM_PATH}" 110
 sudo update-alternatives --install /usr/bin/vi vi "${CUSTOM_NVIM_PATH}" 110
@@ -25,5 +26,10 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 git clone git@github.com:ryanoasis/nerd-fonts.git ~/nerd-fonts/ --depth 1
 ./install ./install.sh ShareTechMono
+
+echo "Installing TS syntax highlighter, LSP and debugger for Python"
+vim --headless +DapInstall python +q
+vim --headless +TsInstall python +q
+vim --headless +LspInstall pyright +q
  
-~/nvim.appimage ~/.config/nvim/lua/plugins/core.lua
+vim ~/.config/nvim/lua/plugins/core.lua
