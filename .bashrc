@@ -116,9 +116,20 @@ fi
 
 # Aliases
 alias p='python3.11'
-# Doesn't work
 alias ssh-start='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github'
 alias v='/home/leo/nvim.appimage'
 alias vim='v'
+alias gpom='git pull origin master'
+alias gpsom='git push origin master'
+alias gpod='git pull origin develop'
+alias gpsod='git push origin develop'
+alias gc='git commit -m '
+alias k='kubectl'
+alias d='docker'
+alias tf='terraform'
+
+
+# Env vars
 export PATH=$PATH
 export HOMEE=/mnt/c/Users/leosc
+
