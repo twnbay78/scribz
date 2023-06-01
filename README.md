@@ -1,2 +1,2 @@
 # scribz
-A collection of sorta useful scripts I've needed to use across multiple machines
+A collection of scripts I've written and needed to re-use across multiple machines/environments
