@@ -127,9 +127,14 @@ alias gc='git commit -m '
 alias k='kubectl'
 alias d='docker'
 alias tf='terraform'
+public_ipv4=$(dig ANY +short @resolver2.opendns.com myip.opendns.com)
+alias ssh_main='ssh -i ~/.ssh/leo_home_server_root leo@$public_ipv4'
 
 
 # Env vars
 export PATH=$PATH
 export HOMEE=/mnt/c/Users/leosc
+
+# Startup scripts
+tmux
 
